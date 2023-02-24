@@ -10,9 +10,9 @@ public class MoveForward : MonoBehaviour
         
     }
 
-    public float speed = 40.0f;
+    public float speed = 10.0f;
     void Update()
     {
-        transform.Translate(gameObject.transform.forward * Time.deltaTime * speed);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 }

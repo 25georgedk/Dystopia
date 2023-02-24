@@ -28,10 +28,6 @@ public class PlayerController : MonoBehaviour
     float horizontalInput;
     float verticalInput;
 
-    [Header("Shooting")]
-    public GameObject projectilePrefab;
-    public float shootCooldown;
-    public bool readyToShoot;
 
     Vector3 moveDirection;
 
@@ -78,15 +74,6 @@ public class PlayerController : MonoBehaviour
 
             Invoke(nameof(ResetJump), jumpCooldown);
         }
-
-        if(Input.GetKey(shootKey) && readyToShoot)
-        {
-            readyToShoot = false;
-
-            Shoot();
-
-            Invoke(nameof(ResetShoot), shootCooldown);
-        }
     }
 
     private void MovePlayer()
@@ -124,13 +111,5 @@ public class PlayerController : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
-    }
-    private void Shoot()
-    {
-        Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
-    }
-    private void ResetShoot()
-    {
-        readyToShoot = true;
     }
 }
