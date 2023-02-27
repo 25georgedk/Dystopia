@@ -8,17 +8,19 @@ public class ActivateProjectile : MonoBehaviour
     public KeyCode shootKey = KeyCode.Mouse0;
     public float shootCooldown;
     public bool readyToShoot;
+    public Transform cameraPosition;
 
     // Update is called once per frame
     void Update()
     {
+        transform.position = cameraPosition.position;
         if (Input.GetKey(shootKey))
         {
             readyToShoot = false;
 
-            Invoke(nameof(ResetShoot), shootCooldown);
-
             var clone = Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
+
+            Invoke(nameof(ResetShoot), shootCooldown);
 
             Destroy(clone, 5.0f);
         }

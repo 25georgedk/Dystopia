@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 7535221235319743790}
   - component: {fileID: 7535221235319743791}
   - component: {fileID: 7535221235319743824}
-  m_Layer: 0
+  - component: {fileID: -4993088236940772842}
+  m_Layer: 8
   m_Name: Laser Shot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,4 +117,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d117a717e854b49b2e6e97c7e3d88e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
+  speed: 20
+--- !u!136 &-4993088236940772842
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7535221235319743825}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.83
+  m_Height: 122.93
+  m_Direction: 1
+  m_Center: {x: 0, y: 50.55, z: 0}
