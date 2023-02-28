@@ -8,13 +8,13 @@ public class ActivateProjectile : MonoBehaviour
     public KeyCode shootKey = KeyCode.Mouse0;
     public float shootCooldown;
     public bool readyToShoot;
-    public Transform cameraPosition;
+    public Transform shootingPosition;
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = cameraPosition.position;
-        if (Input.GetKey(shootKey))
+        transform.position = shootingPosition.position;
+        if (Input.GetKey(shootKey) && readyToShoot)
         {
             readyToShoot = false;
 
@@ -22,7 +22,7 @@ public class ActivateProjectile : MonoBehaviour
 
             Invoke(nameof(ResetShoot), shootCooldown);
 
-            Destroy(clone, 5.0f);
+            Destroy(clone, 3.0f);
         }
     }
     private void ResetShoot()

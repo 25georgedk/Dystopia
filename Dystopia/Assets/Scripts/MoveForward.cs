@@ -15,4 +15,16 @@ public class MoveForward : MonoBehaviour
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "Ground")
+        {
+            Destroy(gameObject);
+        }
+        else if (col.gameObject.tag == "Enemy")
+        {
+            Destroy(col.gameObject);
+            Destroy(gameObject);
+        }
+    }
 }
