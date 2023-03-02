@@ -4,26 +4,22 @@ using UnityEngine;
 
 public class ProjectileManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    public float Damage = 10f;
     public float speed = 10.0f;
+
     void Update()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
-    void OnTriggerEnter(Collider col)
+    void OnTriggerEnter(Collider hit)
     {
-        if (col.gameObject.tag == "Ground")
+        if (hit.gameObject.tag == "Ground")
         {
             Destroy(gameObject);
         }
-        else if (col.gameObject.tag == "Enemy")
+        else if (hit.gameObject.tag == "Enemy")
         {
-            Destroy(col.gameObject);
+            Destroy(hit.gameObject);
             Destroy(gameObject);
         }
     }
