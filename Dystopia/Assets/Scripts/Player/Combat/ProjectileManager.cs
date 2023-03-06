@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ProjectileManager : MonoBehaviour
 {
-    public float Damage = 10f;
     public float speed = 10.0f;
 
     void Update()
@@ -13,14 +12,6 @@ public class ProjectileManager : MonoBehaviour
     }
     void OnTriggerEnter(Collider hit)
     {
-        if (hit.gameObject.tag == "Ground")
-        {
-            Destroy(gameObject);
-        }
-        else if (hit.gameObject.tag == "Enemy")
-        {
-            Destroy(hit.gameObject);
-            Destroy(gameObject);
-        }
+        gameObject.SetActive (false);
     }
 }

@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3517779964358445315}
   - component: {fileID: 3517779964358445324}
   - component: {fileID: 8298595182337490003}
+  - component: {fileID: -1466970471935874605}
+  - component: {fileID: 8669531936184095037}
   m_Layer: 0
   m_Name: Bad Guy (melee)
   m_TagString: Enemy
@@ -135,6 +137,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e85d1ae3e9677104e8130ad40346eaf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 0
+  groundDrag: 0
+  enemyHeight: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  grounded: 0
   goal: {fileID: 0}
 --- !u!54 &8298595182337490003
 Rigidbody:
@@ -152,3 +161,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1466970471935874605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3517779964358445325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9722923e8c93744bb7962835e4ef86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitNumber: 0
+  hitToKill: 3
+--- !u!114 &8669531936184095037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3517779964358445325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52761eb5756bd42478c03a75ae59fdf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
