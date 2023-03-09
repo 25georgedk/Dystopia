@@ -13,7 +13,7 @@ public class EnemyHealth : MonoBehaviour
         {
           hitNumber++;
         }
-        if (hitNumber == hitToKill)
+        if (hitNumber >= hitToKill)
         {
           Destroy(gameObject);
         }
