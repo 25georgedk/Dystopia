@@ -726,9 +726,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 467956567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b2599e30f822d5448c95b29d6d2e0cb, type: 3}
+  m_Script: {fileID: 11500000, guid: a389315893c96af438c74c22e5ba94b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Health: 100
+  wasAttacked: 0
+  Iframes: 0.5
 --- !u!1 &539607026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1951,7 +1954,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3517779964358445314, guid: 74e0ca45a4c53a04a9a425b07ba6ed05, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3517779964358445315, guid: 74e0ca45a4c53a04a9a425b07ba6ed05, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3517779964358445319, guid: 74e0ca45a4c53a04a9a425b07ba6ed05, type: 3}
       propertyPath: m_RootOrder
@@ -2021,5 +2028,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bad Guy (melee)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8669531936184095037, guid: 74e0ca45a4c53a04a9a425b07ba6ed05, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 74e0ca45a4c53a04a9a425b07ba6ed05, type: 3}

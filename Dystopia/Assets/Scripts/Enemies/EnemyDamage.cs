@@ -4,12 +4,5 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
-    public float damageAmount = 1;
-    void OnCollisionStay(Collision other)
-    {
-        if (other.transform.CompareTag("Player"))
-        {
-            SendMessage("ApplyDamage", damageAmount);
-        }  
-    }
+    public float Damage = 5;
 }
