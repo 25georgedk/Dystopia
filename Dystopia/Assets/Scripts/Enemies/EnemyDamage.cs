@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
-    public float Damage = 5;
+    public int AttackDamage = 10;
 }

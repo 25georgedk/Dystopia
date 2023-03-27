@@ -2,18 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
-{
-    public int Health = 100;
-    public bool wasAttacked;
-    public float Iframes;
 
-    public void OnCollisionEnter(Collision collision)
+
+ public class PlayerHealth : MonoBehaviour
+ {
+    public int Health = 100;
+    public float Iframes;
+    private EnemyDamage enemy;
+    public bool wasAttacked;
+
+    private void Start()
     {
-        if (collision.gameObject.CompareTag("Enemy") && wasAttacked == false)
+        enemy = FindObjectOfType<EnemyDamage>();
+    }
+
+    public void OnCollisionEnter(Collision attacked)
+    {
+        if (attacked.gameObject.CompareTag("Enemy") && wasAttacked == false)
         {
             wasAttacked = true;
-            Health -= 10;
+            Health -= enemy.AttackDamage;
 
             Invoke(nameof(ResetDamage), Iframes);
         }
@@ -23,4 +31,20 @@ public class PlayerHealth : MonoBehaviour
     {
         wasAttacked = false;
     }
-}
+
+    public void Update()
+    {
+        if (Health <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
+
+        Debug.Log("Game Over");
+    }
+ }
+
