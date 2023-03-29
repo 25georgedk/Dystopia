@@ -437,7 +437,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 339624733}
-  - component: {fileID: 339624732}
   m_Layer: 1
   m_Name: Post-Processing Volume
   m_TagString: Untagged
@@ -445,18 +444,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &339624732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 339624731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &339624733
 Transform:
   m_ObjectHideFlags: 0
@@ -651,10 +638,6 @@ MonoBehaviour:
   readyToJump: 1
   jumpKey: 32
   shootKey: 323
-  playerHeight: 2
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 1152
   grounded: 0
   orientation: {fileID: 724119677}
 --- !u!54 &467956569
@@ -672,7 +655,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!4 &467956570
 Transform:
   m_ObjectHideFlags: 0
@@ -681,7 +664,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467956567}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: 9.4, y: 5.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -853,6 +836,10 @@ PrefabInstance:
       propertyPath: AttackDamage
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 7009607393522172769, guid: 3b742d1b7f32c40418a1fcf0a1df5ab5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 80ac635fc96ffee49a6d2b6e7531c10c, type: 2}
     - target: {fileID: 7009607393522172775, guid: 3b742d1b7f32c40418a1fcf0a1df5ab5, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -907,7 +894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7009607393522172781, guid: 3b742d1b7f32c40418a1fcf0a1df5ab5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b742d1b7f32c40418a1fcf0a1df5ab5, type: 3}
@@ -5976,6 +5963,7 @@ GameObject:
   - component: {fileID: 1069772228}
   - component: {fileID: 1069772227}
   - component: {fileID: 1069772226}
+  - component: {fileID: 1069772230}
   m_Layer: 6
   m_Name: PlayerObj
   m_TagString: Untagged
@@ -5991,12 +5979,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069772224}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 2.18
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.08, z: 0}
 --- !u!23 &1069772227
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6062,6 +6050,20 @@ Transform:
   m_Father: {fileID: 467956570}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1069772230
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069772224}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1247104848
 GameObject:
   m_ObjectHideFlags: 0
@@ -6523,7 +6525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6375394684329400903, guid: b97d776065345ae46abacafb69d747e7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6375394684329400909, guid: b97d776065345ae46abacafb69d747e7, type: 3}
       propertyPath: m_RootOrder
@@ -6660,7 +6662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3517779964358445325, guid: 74e0ca45a4c53a04a9a425b07ba6ed05, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8669531936184095037, guid: 74e0ca45a4c53a04a9a425b07ba6ed05, type: 3}
