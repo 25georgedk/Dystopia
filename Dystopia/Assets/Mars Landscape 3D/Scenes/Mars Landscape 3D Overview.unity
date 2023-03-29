@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: be7daa80a9044c44e80f6e0f12eaeb6d, type: 2}
 --- !u!1 &68057275
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,6 +904,10 @@ PrefabInstance:
     - target: {fileID: 7009607393522172781, guid: 3b742d1b7f32c40418a1fcf0a1df5ab5, type: 3}
       propertyPath: m_Name
       value: Bad Guy (tank)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009607393522172781, guid: 3b742d1b7f32c40418a1fcf0a1df5ab5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b742d1b7f32c40418a1fcf0a1df5ab5, type: 3}
@@ -6517,6 +6521,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bad Guy (fast)
       objectReference: {fileID: 0}
+    - target: {fileID: 6375394684329400903, guid: b97d776065345ae46abacafb69d747e7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6375394684329400909, guid: b97d776065345ae46abacafb69d747e7, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -6649,6 +6657,10 @@ PrefabInstance:
     - target: {fileID: 3517779964358445325, guid: 74e0ca45a4c53a04a9a425b07ba6ed05, type: 3}
       propertyPath: m_Name
       value: Bad Guy (melee)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3517779964358445325, guid: 74e0ca45a4c53a04a9a425b07ba6ed05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8669531936184095037, guid: 74e0ca45a4c53a04a9a425b07ba6ed05, type: 3}
