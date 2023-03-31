@@ -139,11 +139,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   groundDrag: 5
-  enemyHeight: 2
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 128
-  grounded: 0
   goal: {fileID: 0}
 --- !u!54 &8298595182337490003
 Rigidbody:

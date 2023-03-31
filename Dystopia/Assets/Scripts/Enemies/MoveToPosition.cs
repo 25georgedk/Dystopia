@@ -8,18 +8,19 @@ public class MoveToPosition : MonoBehaviour
 
     public float groundDrag;
     Rigidbody rb;
-    public Transform goal;
+    public GameObject goal;
     private UnityEngine.AI.NavMeshAgent agent;
 
     void Start()
     {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(goal.position);
+        agent.SetDestination(goal.transform.position);
        
         rb.drag = groundDrag;
         

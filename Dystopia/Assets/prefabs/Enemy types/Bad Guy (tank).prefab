@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ad2869c147340204989ac264a718035d, type: 2}
+  - {fileID: 2100000, guid: 80ac635fc96ffee49a6d2b6e7531c10c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -139,11 +139,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   groundDrag: 5
-  enemyHeight: 3
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 128
-  grounded: 0
   goal: {fileID: 0}
 --- !u!54 &2502878438683801139
 Rigidbody:
@@ -174,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitNumber: 0
-  hitToKill: 10
+  hitToKill: 5
 --- !u!114 &5879039145880668623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,4 +182,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd7d844b8b49c040ab42a84a78fb3ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackDamage: 50
+  AttackDamage: 25

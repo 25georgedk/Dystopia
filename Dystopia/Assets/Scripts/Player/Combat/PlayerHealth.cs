@@ -1,19 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 
- public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
  {
-    public int Health = 100;
+    public int maxHealth = 100;
+    public int curHealth;
     public float Iframes;
     private EnemyDamage enemy;
     public bool wasAttacked;
+    public Text textbox;
 
     private void Start()
     {
+        curHealth = maxHealth;
+
         enemy = FindObjectOfType<EnemyDamage>();
+
+        textbox = GetComponentInChildren<Text>();
     }
 
     public void OnCollisionEnter(Collision attacked)
@@ -21,9 +29,10 @@ using UnityEngine;
         if (attacked.gameObject.CompareTag("Enemy") && wasAttacked == false)
         {
             wasAttacked = true;
-            Health -= enemy.AttackDamage;
+            curHealth -= enemy.AttackDamage;
 
             Invoke(nameof(ResetDamage), Iframes);
+            UpdateHealthText();
         }
     }
 
@@ -34,7 +43,9 @@ using UnityEngine;
 
     public void Update()
     {
-        if (Health <= 0)
+        UpdateHealthText();
+
+        if (curHealth <= 0)
         {
             Die();
         }
@@ -42,9 +53,13 @@ using UnityEngine;
 
     public void Die()
     {
-        Destroy(gameObject);
 
         Debug.Log("Game Over");
+        SceneManager.LoadScene(2);
     }
- }
+    private void UpdateHealthText() 
+    {
+        textbox.text = "Health:" + curHealth + "/" + maxHealth;
+    }
+}
 
