@@ -9,7 +9,7 @@ public class ActivateProjectile : MonoBehaviour
     public float shootCooldown;
     public bool readyToShoot;
     public Transform shootingPosition;
-
+    public AudioSource ShootSound;
     // Update is called once per frame
     void Update()
     {
@@ -17,6 +17,8 @@ public class ActivateProjectile : MonoBehaviour
         if (Input.GetKey(shootKey) && readyToShoot)
         {
             readyToShoot = false;
+
+            ShootSound.Play();
 
             var clone = Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
 
