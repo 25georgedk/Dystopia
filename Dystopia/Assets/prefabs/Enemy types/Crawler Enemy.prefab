@@ -1397,6 +1397,7 @@ GameObject:
   - component: {fileID: 567309903517118600}
   - component: {fileID: 2878380375956146020}
   - component: {fileID: 7033448485743910441}
+  - component: {fileID: 2400973751624595026}
   m_Layer: 3
   m_Name: Crawler Enemy
   m_TagString: Enemy
@@ -1520,6 +1521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackDamage: 5
+  player: {fileID: 0}
 --- !u!65 &7033448485743910441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1529,6 +1531,19 @@ BoxCollider:
   m_GameObject: {fileID: 6646870745363141169}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.17, y: 1, z: 1.31}
+  m_Center: {x: 0, y: 0.36, z: 0}
+--- !u!65 &2400973751624595026
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6646870745363141169}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.17, y: 1, z: 1.31}

@@ -361,7 +361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5161892421807338814, guid: 2740f973bf776024bbbad9775bf3af53, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5542076692797534084, guid: 2740f973bf776024bbbad9775bf3af53, type: 3}
       propertyPath: m_RootOrder
@@ -861,7 +861,7 @@ MonoBehaviour:
   maxHealth: 100
   curHealth: 0
   Iframes: 0.5
-  enemy: {fileID: 0}
+  DamageTaken: 0
   wasAttacked: 0
   textbox: {fileID: 344707621}
 --- !u!4 &512131284 stripped
@@ -882,7 +882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5161892421807338814, guid: 2740f973bf776024bbbad9775bf3af53, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5542076692797534084, guid: 2740f973bf776024bbbad9775bf3af53, type: 3}
       propertyPath: m_RootOrder
@@ -984,6 +984,10 @@ PrefabInstance:
     - target: {fileID: 6559752669682935121, guid: 5b97bfe1c42677944b3831c8443a7172, type: 3}
       propertyPath: m_Name
       value: Melee Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559752669682935121, guid: 5b97bfe1c42677944b3831c8443a7172, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b97bfe1c42677944b3831c8443a7172, type: 3}
@@ -6425,6 +6429,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Melee Enemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6559752669682935121, guid: 5b97bfe1c42677944b3831c8443a7172, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b97bfe1c42677944b3831c8443a7172, type: 3}
 --- !u!1 &1247104848
@@ -6776,6 +6784,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Melee Enemy (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6559752669682935121, guid: 5b97bfe1c42677944b3831c8443a7172, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b97bfe1c42677944b3831c8443a7172, type: 3}
 --- !u!1 &1477090905
@@ -6939,6 +6951,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Melee Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6559752669682935121, guid: 5b97bfe1c42677944b3831c8443a7172, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b97bfe1c42677944b3831c8443a7172, type: 3}
 --- !u!1 &1648714774
@@ -7031,6 +7047,10 @@ PrefabInstance:
     - target: {fileID: 6646870745363141169, guid: b3aa84ee74c7e254da678f8866bbef9f, type: 3}
       propertyPath: m_Name
       value: Crawler Enemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646870745363141169, guid: b3aa84ee74c7e254da678f8866bbef9f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3aa84ee74c7e254da678f8866bbef9f, type: 3}
@@ -7154,6 +7174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crawler Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6646870745363141169, guid: b3aa84ee74c7e254da678f8866bbef9f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3aa84ee74c7e254da678f8866bbef9f, type: 3}
 --- !u!1001 &1803797310
@@ -7169,7 +7193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5161892421807338814, guid: 2740f973bf776024bbbad9775bf3af53, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5542076692797534084, guid: 2740f973bf776024bbbad9775bf3af53, type: 3}
       propertyPath: m_RootOrder
@@ -7467,7 +7491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5161892421807338814, guid: 2740f973bf776024bbbad9775bf3af53, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5542076692797534084, guid: 2740f973bf776024bbbad9775bf3af53, type: 3}
       propertyPath: m_RootOrder
@@ -7745,6 +7769,10 @@ PrefabInstance:
     - target: {fileID: 6646870745363141169, guid: b3aa84ee74c7e254da678f8866bbef9f, type: 3}
       propertyPath: m_Name
       value: Crawler Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646870745363141169, guid: b3aa84ee74c7e254da678f8866bbef9f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3aa84ee74c7e254da678f8866bbef9f, type: 3}

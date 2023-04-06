@@ -528,6 +528,7 @@ GameObject:
   - component: {fileID: 5432414406020061944}
   - component: {fileID: 5432414406020061950}
   - component: {fileID: 5432414406020061951}
+  - component: {fileID: 3549775976142008747}
   m_Layer: 3
   m_Name: Tank Enemy
   m_TagString: Enemy
@@ -665,6 +666,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackDamage: 25
+  player: {fileID: 0}
+--- !u!136 &3549775976142008747
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5161892421807338814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.6108902
+  m_Height: 1.79
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.73, z: 0}
 --- !u!1 &5295373778796087849
 GameObject:
   m_ObjectHideFlags: 0

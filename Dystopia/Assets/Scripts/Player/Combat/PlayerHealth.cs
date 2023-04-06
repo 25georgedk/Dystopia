@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
     public int curHealth;
     public float Iframes;
-    public EnemyDamage enemy;
+    public int DamageTaken;
     public bool wasAttacked;
     public Text textbox;
 
@@ -19,18 +19,16 @@ public class PlayerHealth : MonoBehaviour
     {
         curHealth = maxHealth;
 
-        enemy = FindObjectOfType<EnemyDamage>();
-
         textbox = GetComponentInChildren<Text>();
     }
 
-    public void OnCollisionEnter(Collision attacked)
+    public void OnTriggerEnter(Collider attacked)
     {
         if (attacked.gameObject.CompareTag("Enemy") && wasAttacked == false)
         {
             wasAttacked = true;
 
-            TakeDamage();
+            attacked.GetComponent<EnemyDamage>().DealDamage();
 
             Invoke(nameof(ResetDamage), Iframes);
             UpdateHealthText();
@@ -59,17 +57,12 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die()
     {
-
         Debug.Log("Game Over");
         SceneManager.LoadScene(2);
     }
     private void UpdateHealthText() 
     {
         textbox.text = "Health:" + curHealth + "/" + maxHealth;
-    }
-    public void TakeDamage()
-    {
-        curHealth -= enemy.AttackDamage;
     }
 }
 
