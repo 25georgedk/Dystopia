@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
     public int curHealth;
     public float Iframes;
-    private EnemyDamage enemy;
+    public EnemyDamage enemy;
     public bool wasAttacked;
     public Text textbox;
 
@@ -29,7 +29,8 @@ public class PlayerHealth : MonoBehaviour
         if (attacked.gameObject.CompareTag("Enemy") && wasAttacked == false)
         {
             wasAttacked = true;
-            curHealth -= enemy.AttackDamage;
+
+            TakeDamage();
 
             Invoke(nameof(ResetDamage), Iframes);
             UpdateHealthText();
@@ -49,6 +50,11 @@ public class PlayerHealth : MonoBehaviour
         {
             Die();
         }
+
+        if (curHealth > maxHealth)
+        {
+            curHealth = maxHealth;
+        }
     }
 
     public void Die()
@@ -60,6 +66,10 @@ public class PlayerHealth : MonoBehaviour
     private void UpdateHealthText() 
     {
         textbox.text = "Health:" + curHealth + "/" + maxHealth;
+    }
+    public void TakeDamage()
+    {
+        curHealth -= enemy.AttackDamage;
     }
 }
 

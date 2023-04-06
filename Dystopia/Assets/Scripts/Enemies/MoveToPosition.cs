@@ -8,12 +8,14 @@ public class MoveToPosition : MonoBehaviour
 
     public float groundDrag;
     Rigidbody rb;
-    public GameObject goal;
+    private GameObject goal;
     private UnityEngine.AI.NavMeshAgent agent;
 
     void Start()
     {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+
+        goal = GameObject.FindWithTag("Player");
 
     }
 
