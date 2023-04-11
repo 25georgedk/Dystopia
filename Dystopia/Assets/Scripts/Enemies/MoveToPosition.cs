@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class MoveToPosition : MonoBehaviour
 {
-    public float moveSpeed;
-
-    public float groundDrag;
-    Rigidbody rb;
     private GameObject goal;
     private UnityEngine.AI.NavMeshAgent agent;
 
@@ -23,8 +19,5 @@ public class MoveToPosition : MonoBehaviour
     void Update()
     {
         agent.SetDestination(goal.transform.position);
-       
-        rb.drag = groundDrag;
-        
     }
 }
