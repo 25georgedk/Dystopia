@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveToPosition : MonoBehaviour
 {
-    private GameObject goal;
+    public GameObject goal;
     private UnityEngine.AI.NavMeshAgent agent;
 
     void Start()
